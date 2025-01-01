@@ -1,0 +1,38 @@
+.features_area{
+    background-color: #282568;
+    padding: 120px 0 90px;
+}
+.features_area .section_title .sub-title{
+    background: #5751E1;
+    color: #fff;
+}
+.features_area .section_title .title{
+    color: #fff;
+}
+.features_area .section_title p{
+    color: #acaacc;
+}
+
+.features_item{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.features_icon{
+    min-height: 93px;
+    margin-bottom: 22px;
+    transition: all .3s ease-in-out 0s;
+}
+.features_item:hover .features_icon{
+    transform: translateY(5px);
+}
+.features-content .title{
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "poppins";
+}
+.features-content p{
+    color:#ACAACC;
+    margin-bottom: 0;
+}
