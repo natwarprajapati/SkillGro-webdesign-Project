@@ -1,0 +1,56 @@
+
+.preview__header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 12px;
+    height: 54px;
+    background-color: #262626;
+    z-index: 100;
+    line-height: 54px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .preview__envato-logo {
+    float: left;
+    padding: 0 20px;
+    text-decoration: none;
+    color: green;
+  }
+  
+  .preview__envato-logo a img {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    text-indent: -9999px;
+    height: 18px;
+    width: 152px;
+    background-size: 152px 18px;
+  }
+  
+  .preview__actions {
+    float: right;
+  }
+  
+  .preview__action--buy {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .e-btn--3d.-color-primary {
+    -webkit-box-shadow: 0 2px 0 #6f9a37;
+    box-shadow: 0 2px 0 #6f9a37;
+    position: relative;
+  }
+  
+  .preview__action--buy a {
+    text-decoration: none;
+    color: white;
+    background-color: #82b440;
+    padding: 7.5px 20px;
+    font-size: 14px;
+    border-radius: 2px;
+  }
+  

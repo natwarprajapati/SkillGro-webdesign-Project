@@ -1,10 +1,10 @@
 import '../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Pages/Home';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
+import { Layout } from './Layout';
+import { Home } from './Pages/Home';
 
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
     });
   }, []);
   return (
-    <>
-    <Home/>
-    </>
-  )
+    <Layout>
+      <Home/>
+    </Layout>
+    )
 }
 
 export default App

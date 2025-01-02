@@ -1,0 +1,70 @@
+
+.header_top {
+    padding: 11px 0;
+    background-color: #161439;
+    display: flex;
+    margin-top: 54px;
+    justify-content: space-between;
+  
+  }
+  
+  .header_top-left {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .header-location img {
+    margin: 5px;
+  }
+  
+  .header-location span {
+    margin: 5px;
+    color: #e6eaef;
+    font-size: 14px;
+    font-weight: 50;
+    gap: 7px;
+  }
+  
+  .header-email img {
+    margin: 5px;
+  }
+  
+  .header-email a {
+    text-decoration: none;
+    color: #e6eaef
+  }
+  
+  .header-top-right {
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .header-call {
+    color: #e6eaef;
+    margin-right: 10px;
+  
+  }
+  
+  .header-call a {
+    text-decoration: none;
+    color: #e6eaef;
+  }
+  
+  .header-follow-us span {
+    color: #e6eaef;
+  }
+  
+  .header-follow-us a {
+    margin-left: 8px;
+    color: #e6eaef;
+  }
+  
+  .header-follow-us a li {
+    margin-left: 8px;
+    color: #e6eaef;
+  }
+  @media (max-width:991px) {
+   .header_top{
+    display: none;
+   } 
+  }
