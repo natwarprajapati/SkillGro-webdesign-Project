@@ -2,11 +2,11 @@ import { HeaderTop } from '../HeaderTop'
 import { TopBar } from '../TopBar'
 import './header.css'
 
-export  const Header = ()=>{
+export const Header = () => {
     return (
         <header>
-            <TopBar/>
-            <HeaderTop/>
+            <TopBar />
+            <HeaderTop />
             <div className="tg_header__area tg-header_style-three" >
                 <div className="container-fluid">
                     <div className="row">
@@ -275,16 +275,16 @@ export  const Header = ()=>{
                                                     <div className="categories-dropdown">
                                                         <div className="categories_dropdrown_placeholder">Categories
                                                             {/* <i className="fa-solid fa-chevron-down fa-xs ms-2 me-2"></i> */}
-                                                            </div>
-                                                            
+                                                        </div>
+
                                                     </div>
                                                 </div></div>
-                                                <div className="input-grp">
-                                                    <input type="text" name="" id="" placeholder='Search For Course...' />
-                                                    <button type='submit'>
-                                                        <i className="fa-solid fa-magnifying-glass fa-sm"></i>
-                                                    </button>
-                                                </div>
+                                            <div className="input-grp">
+                                                <input type="text" name="" id="" placeholder='Search For Course...' />
+                                                <button type='submit'>
+                                                    <i className="fa-solid fa-magnifying-glass fa-sm"></i>
+                                                </button>
+                                            </div>
                                             {/* </div> */}
                                         </form>
                                     </div>
@@ -323,6 +323,271 @@ export  const Header = ()=>{
                                             </li>
                                         </ul>
                                     </div>
+                                    {/* <div> */}
+                                    <button className="btn mobile_nav-menu d-block d-xl-none no-outline" style={{ outline: "none" }} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                        <img src="/src/assets/img/menu.png" alt="" />
+                                    </button>
+                                    <div className="offcanvas offcanvas-end " tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                        <div className="offcanvas-header">
+                                            <img src="/src/assets/img/logo.svg" className='mt-3 ms-2' alt="" />
+                                            {/* <h5 id="offcanvasRightLabel">Offcanvas right</h5> */}
+
+                                            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" />
+                                        </div>
+                                        <div className="offcanvas-body ">
+                                            <div className="tgmenu_navbar-wrap tgmobile_menu tgmenu__main-menu d-xl-none d-block">
+                                                <ul className="navigation">
+                                                    <li className="menu-item-has-children">
+                                                        <a href="/">Home
+                                                        </a>
+                                                        <ul className="sub-menu mega-menu">
+                                                            <li>
+                                                                <ul className="list-wrap mega-sub-menu">
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Main Home
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Online Course
+                                                                            <span className="tg-badge">
+                                                                                Hot
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            University
+                                                                            <span className="tg-badge-two">
+                                                                                New
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Yoga Instructor
+                                                                            <span className="tg-badge-two">
+                                                                                New
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Kindergarten
+                                                                            <span className="tg-badge">
+                                                                                Hot
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <ul className="list-wrap mega-sub-menu">
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Language Academy
+                                                                            <span className='tg-badge-two'>
+                                                                                New
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Business Coach
+                                                                            <span className='tg-badge-two'>
+                                                                                New
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Kitchen Coach
+                                                                            <span className='tg-badge'>
+                                                                                Hot
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <div className="mega-menu-img">
+                                                                    <a href="">
+                                                                        <img src="/src/assets/img/mega_menu_img.jpg" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className="menu-item-has-children">
+                                                        <a href="/">Courses
+                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
+                                                        </a>
+                                                        <ul className="sub-menu undefined">
+                                                            <li className="menu-item-has-children ">
+                                                                <a href="" >All Courses
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children ">
+                                                                <a href="">
+                                                                    Course Details
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Course Lesson
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className="menu-item-has-children">
+                                                        <a href="/">Pages
+                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
+                                                        </a>
+                                                        <ul className="sub-menu undefined">
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    About Us
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Our Instructors
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                                <ul className="sub-menu">
+                                                                    <li>
+                                                                        <a href="">Our Instructors</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Instructor Details</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Our Events
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                                <ul className="sub-menu">
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Our Events
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">
+                                                                            Events Details
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Shop
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                                <ul className="sub-menu" >
+                                                                    <li><a href="" >Shop</a></li>
+                                                                    <li><a href="">Shop Details</a></li>
+                                                                    <li><a href="">WishList</a></li>
+                                                                    <li><a href="">Cart Page</a></li>
+                                                                    <li><a href="">Checkout</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Blog
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                                <ul className="sub-menu">
+                                                                    <li><a href="">Blog Right Sidebar</a></li>
+                                                                    <li><a href="">Blog Left Sidebar</a></li>
+                                                                    <li><a href="">Blog Full Width</a></li>
+                                                                    <li><a href="">Blog Detais</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Student Login
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Student Registration
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    404 Page
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Contact
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className="menu-item-has-children">
+                                                        <a href="/">Dashboard
+                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
+                                                        </a>
+                                                        <ul className="sub-menu undefined">
+                                                            <li className="menu-item-has-children " >
+                                                                <a href="" className='me-0 pe-0'>
+                                                                    Instructor dashboard
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3 "></i>
+                                                                <ul className="sub-menu">
+                                                                    <li><a href="">Dashboard</a></li>
+                                                                    <li><a href="">Profile</a></li>
+                                                                    <li><a href="">Enrolled Course</a></li>
+                                                                    <li><a href="">Wishlist</a></li>
+                                                                    <li><a href="">Reviews</a></li>
+                                                                    <li><a href="">My Quiz Attemps</a></li>
+                                                                    <li><a href="">Order History</a></li>
+                                                                    <li><a href="">My Course</a></li>
+                                                                    <li><a href="">Announcements</a></li>
+                                                                    <li><a href="">Quiz Attemps</a></li>
+                                                                    <li><a href="">Assignments</a></li>
+                                                                    <li><a href="">Settings</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li className="menu-item-has-children">
+                                                                <a href="">
+                                                                    Student Dashboard
+                                                                </a>
+                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+                                                                <ul className="sub-menu">
+                                                                    <li><a href="">Dashboard</a></li>
+                                                                    <li><a href="">Profile</a></li>
+                                                                    <li><a href="">Enrolled Courses</a></li>
+                                                                    <li><a href="">Wishlist</a></li>
+                                                                    <li><a href="">Reviews</a></li>
+                                                                    <li><a href="">My Quiz Compitition</a></li>
+                                                                    <li><a href="">Order History</a></li>
+                                                                    <li><a href="">Settings</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    {/* </div> */}
+
                                 </div>
                             </div>
                         </div>
