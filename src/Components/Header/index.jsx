@@ -1,8 +1,25 @@
+import { useState } from 'react'
 import { HeaderTop } from '../HeaderTop'
 import { TopBar } from '../TopBar'
 import './header.css'
 
 export const Header = () => {
+
+    const [clsname, setClsName] = useState(null);
+    const [subClsname, setSubClsname] = useState(null)
+    const [btnicon, setBtnIcon] = useState("+")
+
+    const toggleClass = (div) => {
+        setClsName(clsname === div ? null : div)
+        setSubClsname(null); 
+    }
+    const toggleSubClass = (div) => {
+        setSubClsname(subClsname === div ? null : div)
+    }
+
+
+
+
     return (
         <header>
             <TopBar />
@@ -340,7 +357,12 @@ export const Header = () => {
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Home
                                                         </a>
-                                                        <ul className="sub-menu mega-menu">
+                                                        <button onClick={() => toggleClass("home")}  className={`toggle-button ${clsname === "home" ? "show" : "hide"} ps-2 pe-2 mt-2 mb-2`}>
+                                                         {btnicon}
+                                                        </button>
+
+                                                        {/* <div className="card card-body"> */}
+                                                        <ul className={`sub-menu mega-menu ${clsname === "home" ? "show" : "hide"}`}>
                                                             <li>
                                                                 <ul className="list-wrap mega-sub-menu">
                                                                     <li>
@@ -410,56 +432,52 @@ export const Header = () => {
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li>
-                                                                <div className="mega-menu-img">
-                                                                    <a href="">
-                                                                        <img src="/src/assets/img/mega_menu_img.jpg" alt="" />
-                                                                    </a>
-                                                                </div>
-                                                            </li>
                                                         </ul>
+
+                                                        {/* </div> */}
+
+
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Courses
-                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
                                                         </a>
-                                                        <ul className="sub-menu undefined">
+                                                        <button onClick={() => toggleClass("course")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>{btnicon}
+                                                        </button>
+                                                        <ul className={`sub-menu undefined ${clsname === "course" ? "show" : "hide"}`}>
                                                             <li className="menu-item-has-children ">
                                                                 <a href="" >All Courses
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                             <li className="menu-item-has-children ">
                                                                 <a href="">
                                                                     Course Details
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     Course Lesson
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Pages
-                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
                                                         </a>
-                                                        <ul className="sub-menu undefined">
+                                                        <button onClick={() => toggleClass("pages")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                        </button>
+                                                        <ul className={`sub-menu undefined ${clsname === "pages" ? "show" : "hide"} `}>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     About Us
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     Our Instructors
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
-                                                                <ul className="sub-menu">
+                                                                <button onClick={() => toggleSubClass("pages")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                </button>
+                                                                <ul className={`sub-menu ${subClsname === "pages" ? "show" : "hide"}`}>
                                                                     <li>
                                                                         <a href="">Our Instructors</a>
                                                                     </li>
@@ -472,8 +490,10 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Our Events
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
-                                                                <ul className="sub-menu">
+                                                                <button onClick={() => toggleSubClass("our-events")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                </button>
+
+                                                                <ul className={`sub-menu n ${subClsname === "our-events" ? "show" : "hide"} `}>
                                                                     <li>
                                                                         <a href="">
                                                                             Our Events
@@ -490,8 +510,10 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Shop
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
-                                                                <ul className="sub-menu" >
+                                                                <button onClick={() => toggleSubClass("shop")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                </button>
+
+                                                                <ul className={`sub-menu ${subClsname === "shop" ? "show" : "hide"}`} >
                                                                     <li><a href="" >Shop</a></li>
                                                                     <li><a href="">Shop Details</a></li>
                                                                     <li><a href="">WishList</a></li>
@@ -503,8 +525,9 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Blog
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
-                                                                <ul className="sub-menu">
+                                                                <button onClick={() => toggleSubClass("blog")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                </button>
+                                                                <ul className={`sub-menu ${subClsname === "blog" ? "show" : "hide"}`}>
                                                                     <li><a href="">Blog Right Sidebar</a></li>
                                                                     <li><a href="">Blog Left Sidebar</a></li>
                                                                     <li><a href="">Blog Full Width</a></li>
@@ -515,39 +538,38 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Student Login
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
+
                                                             </li>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     Student Registration
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     404 Page
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                             <li className="menu-item-has-children">
                                                                 <a href="">
                                                                     Contact
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Dashboard
-                                                            <i className="fa-solid fa-chevron-down fa-xs ms-2"></i>
                                                         </a>
-                                                        <ul className="sub-menu undefined">
+                                                        <button onClick={() => toggleClass("dashboard")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                        </button>
+                                                        <ul className={`sub-menu undefined ${clsname === "dashboard" ? "show" : "hide"}`}>
                                                             <li className="menu-item-has-children " >
                                                                 <a href="" className='me-0 pe-0'>
                                                                     Instructor dashboard
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3 "></i>
-                                                                <ul className="sub-menu">
+                                                                <button onClick={() => toggleSubClass("ins-dash")} className='toggle-button ps-2 pe-2 ms-2 mt-2 mb-2'>+
+                                                                </button>
+                                                                <ul className={`sub-menu ${subClsname === "ins-dash" ? "show" : "hide"}`}>
                                                                     <li><a href="">Dashboard</a></li>
                                                                     <li><a href="">Profile</a></li>
                                                                     <li><a href="">Enrolled Course</a></li>
@@ -566,8 +588,9 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Student Dashboard
                                                                 </a>
-                                                                <i className="fa-solid fa-chevron-down fa-xs me-3"></i>
-                                                                <ul className="sub-menu">
+                                                                <button onClick={() => toggleSubClass("std-dash")} className='toggle-button ps-2 pe-2 ms-2 mt-2 mb-2'>+
+                                                                </button>
+                                                                <ul className={`sub-menu ${subClsname === "std-dash" ? "show" : "hide"}`}>
                                                                     <li><a href="">Dashboard</a></li>
                                                                     <li><a href="">Profile</a></li>
                                                                     <li><a href="">Enrolled Courses</a></li>
@@ -594,6 +617,6 @@ export const Header = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 }
