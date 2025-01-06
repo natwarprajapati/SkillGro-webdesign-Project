@@ -472,11 +472,14 @@ textarea {
   .tgmobile_menu .navigation li .sub-menu {
     padding: 0 !important;
     margin: 0;
-    display: none;
     position: static;
     box-shadow: none;
     border:none;
-     margin-left: 20px; 
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+    display: none ;
+     /* margin-left: 20px;  */
   }
   .tgmobile_menu .navigation li:first-child .sub-menu {
     margin-left: 0 ;
@@ -512,12 +515,12 @@ textarea {
   .tgmobile_menu .navigation li ul li>a{
     margin-left: 20px;
     padding: 10px 25px;
-
   }
+  .tgmenu_navbar-wrap ul li .sub-menu li ul li {
+    margin-left: 20px;
+  }
+
   .sub-menu.show {
-    visibility: visible;
-    transform: scale(1);
-    opacity: 1;
     display: block !important;
   }
   /*toggle  button */
@@ -535,6 +538,34 @@ textarea {
     background-color: #f0f0f0;
     transition: all ease-in-out .3s 0s;
   }
+  .toggle-button .plus-line::after{
+    content: "";
+    position: absolute;
+    background-color: #06042E;
+    height: 2px;
+    right: 30%;
+    top:50%;
+    border-radius: 6px;
+    width:12px;
+  }
+  .toggle-button .plus-line::before{
+    content: "";
+    position: absolute;
+    background-color: #06042E;
+    height: 12px;
+    right: 45%;
+    top:35%;
+    border-radius: 6px;
+    width:2px;
+  }
+  .toggle-button.show>.plus-line::before{
+    display: none;
+  }
+  .toggle-button.show>.plus-line::after{
+    background-color: #fff;
+  }
+  
+
   .toggle-button.show{
     background-color: #5751E1 ;
     color: #fff;

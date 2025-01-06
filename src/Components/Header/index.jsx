@@ -7,7 +7,7 @@ export const Header = () => {
 
     const [clsname, setClsName] = useState(null);
     const [subClsname, setSubClsname] = useState(null)
-    const [btnicon, setBtnIcon] = useState("+")
+    // const [btnicon, setBtnIcon] = useState("+")
 
     const toggleClass = (div) => {
         setClsName(clsname === div ? null : div)
@@ -358,7 +358,7 @@ export const Header = () => {
                                                         <a href="/">Home
                                                         </a>
                                                         <button onClick={() => toggleClass("home")}  className={`toggle-button ${clsname === "home" ? "show" : "hide"} ps-2 pe-2 mt-2 mb-2`}>
-                                                         {btnicon}
+                                                        <span className="plus-line"></span>
                                                         </button>
 
                                                         {/* <div className="card card-body"> */}
@@ -441,7 +441,8 @@ export const Header = () => {
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Courses
                                                         </a>
-                                                        <button onClick={() => toggleClass("course")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>{btnicon}
+                                                        <button onClick={() => toggleClass("course")} className={`toggle-button ${clsname === "course" ? "show" : "hide"} ps-2 pe-2 mt-2 mb-2`}>
+                                                            <span className="plus-line"></span>
                                                         </button>
                                                         <ul className={`sub-menu undefined ${clsname === "course" ? "show" : "hide"}`}>
                                                             <li className="menu-item-has-children ">
@@ -463,7 +464,9 @@ export const Header = () => {
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Pages
                                                         </a>
-                                                        <button onClick={() => toggleClass("pages")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                        <button onClick={() => toggleClass("pages")} className={`toggle-button ${clsname === "pages" ? "show" : "hide"} ps-2 pe-2 mt-2 mb-2`}>
+                                                            <span className="plus-line">
+                                                            </span>
                                                         </button>
                                                         <ul className={`sub-menu undefined ${clsname === "pages" ? "show" : "hide"} `}>
                                                             <li className="menu-item-has-children">
@@ -475,9 +478,10 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Our Instructors
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("pages")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("our-ins")} className={`toggle-button ${subClsname === "our-ins" ? "show" : "hide"} ps-2 pe-2 mt-1 mb-2`}>
+                                                                    <span className="plus-line"></span>
                                                                 </button>
-                                                                <ul className={`sub-menu ${subClsname === "pages" ? "show" : "hide"}`}>
+                                                                <ul className={`sub-menu ${subClsname === "our-ins" ? "show" : "hide"}`}>
                                                                     <li>
                                                                         <a href="">Our Instructors</a>
                                                                     </li>
@@ -490,7 +494,8 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Our Events
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("our-events")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("our-events")} className={`toggle-button ${subClsname === "our-events" ? "show" : "hide"}`}>
+                                                                    <span className="plus-line"></span>
                                                                 </button>
 
                                                                 <ul className={`sub-menu n ${subClsname === "our-events" ? "show" : "hide"} `}>
@@ -510,7 +515,8 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Shop
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("shop")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("shop")} className={`toggle-button ${subClsname === "shop" ? "show" : "hide"} mt-1`}>
+                                                                    <span className="plus-line"></span>
                                                                 </button>
 
                                                                 <ul className={`sub-menu ${subClsname === "shop" ? "show" : "hide"}`} >
@@ -525,7 +531,8 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Blog
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("blog")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("blog")} className={`toggle-button ${subClsname === "blog" ? "show" : "hide"} ps-2 pe-2 mt-1 mb-2`}>
+                                                                    <span className="plus-line"></span>
                                                                 </button>
                                                                 <ul className={`sub-menu ${subClsname === "blog" ? "show" : "hide"}`}>
                                                                     <li><a href="">Blog Right Sidebar</a></li>
@@ -560,14 +567,16 @@ export const Header = () => {
                                                     <li className="menu-item-has-children">
                                                         <a href="/">Dashboard
                                                         </a>
-                                                        <button onClick={() => toggleClass("dashboard")} className='toggle-button ps-2 pe-2 mt-2 mb-2'>+
+                                                        <button onClick={() => toggleClass("dashboard")} className={`toggle-button ${clsname === "dashboard" ? "show" : "hide"} ps-2 pe-2 mt-2 mb-2`}>
+                                                            <span className="plus-line"></span>
                                                         </button>
                                                         <ul className={`sub-menu undefined ${clsname === "dashboard" ? "show" : "hide"}`}>
                                                             <li className="menu-item-has-children " >
                                                                 <a href="" className='me-0 pe-0'>
                                                                     Instructor dashboard
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("ins-dash")} className='toggle-button ps-2 pe-2 ms-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("ins-dash")} className={`toggle-button ${subClsname === "ins-dash" ? "show" : "hide"} ps-2 pe-2 ms-2 mt-2 mb-2`}>
+                                                                <span className="plus-line"></span>
                                                                 </button>
                                                                 <ul className={`sub-menu ${subClsname === "ins-dash" ? "show" : "hide"}`}>
                                                                     <li><a href="">Dashboard</a></li>
@@ -588,7 +597,8 @@ export const Header = () => {
                                                                 <a href="">
                                                                     Student Dashboard
                                                                 </a>
-                                                                <button onClick={() => toggleSubClass("std-dash")} className='toggle-button ps-2 pe-2 ms-2 mt-2 mb-2'>+
+                                                                <button onClick={() => toggleSubClass("std-dash")} className={`toggle-button ${subClsname === "std-dash" ? "show" : "hide"} ps-2 pe-2 ms-2 mt-2 mb-2`}>
+                                                                    <span className="plus-line"></span>
                                                                 </button>
                                                                 <ul className={`sub-menu ${subClsname === "std-dash" ? "show" : "hide"}`}>
                                                                     <li><a href="">Dashboard</a></li>
