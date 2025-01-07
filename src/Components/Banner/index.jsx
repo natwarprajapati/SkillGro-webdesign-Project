@@ -1,11 +1,12 @@
 import './banner.css'
 export const Banner = ()=>{
+
     return(
         <section className='banner-area' >
                 <div className="banner-container container">
                     <div className="row">
                         <div className=" col-lg-6">
-                            <div className="banner_content">
+                            <div className="banner_content" >
                                 <h3 className="title animate__animated animate__fadeInLeft">
                                     Never Stop
                                     <span className='learning-container'>

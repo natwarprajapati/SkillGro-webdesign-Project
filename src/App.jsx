@@ -1,10 +1,11 @@
-import '../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/App.css'
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { Layout } from './Layout';
-import { Home } from './Pages/Home';
+// import { Home } from './Pages/Home';
+import { Dashboard } from './Components/Dashboard/Index';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
   }, []);
   return (
     <Layout>
-      <Home/>
+      {/* <Home/> */}
+      <Dashboard/>
     </Layout>
     )
 }

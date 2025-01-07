@@ -40,3 +40,8 @@ a {
     font-family: "poppins";
       color: #161439;
 }
+@media (min-width:1400px) {
+  .banner-area .container{
+    max-width: 1440px ;
+  }
+}

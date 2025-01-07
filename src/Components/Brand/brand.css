@@ -39,6 +39,13 @@
     max-width: 100%;
     justify-content: center;
   }
+  .brand-content ul li a:hover img {
+    transition: all .3s ease-in-out 0s;
+    opacity: .7;
+  }
+  .brand-content ul li a:hover ~ ul {
+    animation-play-state: paused;
+  }
   
   .brand-content ul li .brand_star {
     height: 30px;
@@ -47,11 +54,9 @@
   
   .brand-content:hover ul {
     animation-play-state: paused;
+    
   }
   
-  .brand-content ul li a:hover img {
-    color: #B5B4C1
-  }
   
   
   @keyframes scroll {
